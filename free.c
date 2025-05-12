@@ -26,7 +26,7 @@ int ft_error(char *str, t_stack **stack)
 {
     if(stack != NULL)
         free_node(stack);
-    ft_putstr(str);
+    ft_putstr("Error");
     ft_putstr("\n");
     exit(EXIT_FAILURE);
 }

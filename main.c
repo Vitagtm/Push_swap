@@ -37,7 +37,10 @@ int main(int argc, char **argv)
     {
         num = ft_split(argv[i], ' ');
         if(!num)
-            ft_error("Error: ft_split falló\n", &a);
+            ft_error("Error: ft_split espacios falló\n", &a);
+        num = ft_split(argv[i], ',');
+        if(!num)
+            ft_error("Error: ft_split comas falló\n", &a);
         validate_num_array(num, &a);
         validate_range_len(num, &a);
         node_into_stack_and_null_parse(&a, num);
